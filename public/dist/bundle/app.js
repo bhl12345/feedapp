@@ -128,14 +128,24 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([27,0]);
+/******/ 	deferredModules.push([29,0]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 11:
+/******/ ([
+/* 0 */,
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -161,8 +171,7 @@ exports.default = {
 };
 
 /***/ }),
-
-/***/ 12:
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -218,8 +227,7 @@ exports.default = function () {
 };
 
 /***/ }),
-
-/***/ 13:
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -242,8 +250,8 @@ exports.userReducer = _userReducer2.default; /* * * * * * * * * * * * * * * * * 
                                              */
 
 /***/ }),
-
-/***/ 15:
+/* 14 */,
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -297,8 +305,12 @@ exports.default = {
 };
 
 /***/ }),
-
-/***/ 21:
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -328,94 +340,130 @@ var Sidebar = function (_Component) {
     function Sidebar() {
         _classCallCheck(this, Sidebar);
 
-        return _possibleConstructorReturn(this, (Sidebar.__proto__ || Object.getPrototypeOf(Sidebar)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Sidebar.__proto__ || Object.getPrototypeOf(Sidebar)).call(this));
+
+        _this.state = {
+            feed: {
+                name: '',
+                url: ''
+            }
+        };
+        return _this;
     }
 
     _createClass(Sidebar, [{
-        key: "render",
+        key: 'updateFeed',
+        value: function updateFeed(field, event) {
+
+            var feed = Object.assign({}, this.state.feed);
+            feed[field] = event.target.value;
+
+            this.setState({
+                feed: feed
+            });
+        }
+    }, {
+        key: 'addFeed',
+        value: function addFeed(event) {
+            var turboClient = turbo({ site_id: '5f5e42c5ae5e6600150659fb' });
+            turboClient.create('feed', this.state.feed).then(function (data) {
+                console.log('Feed created: ' + JSON.stringify(data));
+            }).catch(function (error) {
+                alert('Error: ' + err.message);
+            });
+        }
+    }, {
+        key: 'render',
         value: function render() {
+
             return _react2.default.createElement(
-                "div",
-                { id: "sidebar" },
+                'div',
+                { id: 'sidebar' },
                 _react2.default.createElement(
-                    "div",
-                    { className: "inner" },
+                    'div',
+                    { className: 'inner' },
                     _react2.default.createElement(
-                        "section",
-                        { id: "search", className: "alt" },
+                        'section',
+                        { id: 'search', className: 'alt' },
                         _react2.default.createElement(
-                            "form",
-                            { method: "post", action: "#" },
-                            _react2.default.createElement("input", { type: "text", name: "query", id: "query", placeholder: "Search" })
+                            'form',
+                            { method: 'post', action: '#' },
+                            _react2.default.createElement('input', { onChange: this.updateFeed.bind(this, 'name'), type: 'text', placeholder: 'Name' }),
+                            _react2.default.createElement('input', { onChange: this.updateFeed.bind(this, 'url'), type: 'text', placeholder: 'Feed' }),
+                            _react2.default.createElement(
+                                'button',
+                                { onClick: this.addFeed.bind(this) },
+                                'Add Feed'
+                            )
                         )
                     ),
                     _react2.default.createElement(
-                        "nav",
-                        { id: "menu" },
+                        'nav',
+                        { id: 'menu' },
                         _react2.default.createElement(
-                            "header",
-                            { className: "major" },
+                            'header',
+                            { className: 'major' },
                             _react2.default.createElement(
-                                "h2",
+                                'h2',
                                 null,
-                                "My Feeds"
+                                'My Feeds'
                             )
                         ),
                         _react2.default.createElement(
-                            "ul",
+                            'ul',
                             null,
                             _react2.default.createElement(
-                                "li",
+                                'li',
                                 null,
                                 _react2.default.createElement(
-                                    "a",
-                                    { href: "index.html" },
-                                    "Hacker News"
+                                    'a',
+                                    { href: 'index.html' },
+                                    'Hacker News'
                                 )
                             ),
                             _react2.default.createElement(
-                                "li",
+                                'li',
                                 null,
                                 _react2.default.createElement(
-                                    "a",
-                                    { href: "generic.html" },
-                                    "NY Daily News Sports"
+                                    'a',
+                                    { href: 'generic.html' },
+                                    'NY Daily News Sports'
                                 )
                             ),
                             _react2.default.createElement(
-                                "li",
+                                'li',
                                 null,
                                 _react2.default.createElement(
-                                    "a",
-                                    { href: "elements.html" },
-                                    "Elements"
+                                    'a',
+                                    { href: 'elements.html' },
+                                    'Elements'
                                 )
                             ),
                             _react2.default.createElement(
-                                "li",
+                                'li',
                                 null,
                                 _react2.default.createElement(
-                                    "a",
-                                    { href: "#" },
-                                    "Maximus Erat"
+                                    'a',
+                                    { href: '#' },
+                                    'Maximus Erat'
                                 )
                             ),
                             _react2.default.createElement(
-                                "li",
+                                'li',
                                 null,
                                 _react2.default.createElement(
-                                    "a",
-                                    { href: "#" },
-                                    "Sapien Mauris"
+                                    'a',
+                                    { href: '#' },
+                                    'Sapien Mauris'
                                 )
                             ),
                             _react2.default.createElement(
-                                "li",
+                                'li',
                                 null,
                                 _react2.default.createElement(
-                                    "a",
-                                    { href: "#" },
-                                    "Amet Lacinia"
+                                    'a',
+                                    { href: '#' },
+                                    'Amet Lacinia'
                                 )
                             )
                         )
@@ -431,8 +479,27 @@ var Sidebar = function (_Component) {
 exports.default = Sidebar;
 
 /***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/***/ 22:
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Sidebar = undefined;
+
+var _Sidebar = __webpack_require__(21);
+
+var _Sidebar2 = _interopRequireDefault(_Sidebar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.Sidebar = _Sidebar2.default;
+
+/***/ }),
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -448,9 +515,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Sidebar = __webpack_require__(21);
-
-var _Sidebar2 = _interopRequireDefault(_Sidebar);
+var _presentation = __webpack_require__(22);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -524,7 +589,7 @@ var Home = function (_Component) {
                         )
                     )
                 ),
-                _react2.default.createElement(_Sidebar2.default, null)
+                _react2.default.createElement(_presentation.Sidebar, null)
             );
         }
     }]);
@@ -535,8 +600,31 @@ var Home = function (_Component) {
 exports.default = Home;
 
 /***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/***/ 27:
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Home = undefined;
+
+var _Home = __webpack_require__(23);
+
+var _Home2 = _interopRequireDefault(_Home);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.Home = _Home2.default;
+
+/***/ }),
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -552,9 +640,7 @@ var _reactDom = __webpack_require__(3);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _Home = __webpack_require__(22);
-
-var _Home2 = _interopRequireDefault(_Home);
+var _pages = __webpack_require__(24);
 
 var _reactRedux = __webpack_require__(10);
 
@@ -585,7 +671,7 @@ var App = function (_Component) {
             return _react2.default.createElement(
                 _reactRedux.Provider,
                 { store: _stores2.default.configure(null) },
-                _react2.default.createElement(_Home2.default, null)
+                _react2.default.createElement(_pages.Home, null)
             );
         }
     }]);
@@ -596,6 +682,5 @@ var App = function (_Component) {
 _reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('root'));
 
 /***/ })
-
-/******/ });
+/******/ ]);
 //# sourceMappingURL=app.map

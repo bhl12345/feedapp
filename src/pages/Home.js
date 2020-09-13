@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Sidebar } from '../theme'
+import { Sidebar } from '../components/presentation'
 
 class Home extends Component {
 	render(){

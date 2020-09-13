@@ -1,17 +1,15 @@
+
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import Home  from './components/Home'
+import { Home } from './pages'
 import { Provider } from 'react-redux'
 import store from './stores'
-import { Home } from './pages'
 
 class App extends Component {
     render(){
         return (
             <Provider store={store.configure(null)}>
-            
-                <Home /> 
-             
+                <Home />
             </Provider>
         )
     }
