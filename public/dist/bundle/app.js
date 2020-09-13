@@ -417,8 +417,8 @@ var Sidebar = function (_Component) {
                                 null,
                                 _react2.default.createElement(
                                     'a',
-                                    { href: 'index.html' },
-                                    'Hacker News'
+                                    { href: 'http://rssfeeds.cincinnati.com/cincinnati-sports&x=1' },
+                                    'Cincy Sports'
                                 )
                             ),
                             _react2.default.createElement(
@@ -426,8 +426,8 @@ var Sidebar = function (_Component) {
                                 null,
                                 _react2.default.createElement(
                                     'a',
-                                    { href: 'generic.html' },
-                                    'NY Daily News Sports'
+                                    { href: 'https://www.govinfo.gov' },
+                                    'Politics'
                                 )
                             ),
                             _react2.default.createElement(
@@ -436,7 +436,7 @@ var Sidebar = function (_Component) {
                                 _react2.default.createElement(
                                     'a',
                                     { href: 'elements.html' },
-                                    'Elements'
+                                    ' '
                                 )
                             ),
                             _react2.default.createElement(
@@ -445,7 +445,7 @@ var Sidebar = function (_Component) {
                                 _react2.default.createElement(
                                     'a',
                                     { href: '#' },
-                                    'Maximus Erat'
+                                    ' '
                                 )
                             ),
                             _react2.default.createElement(
@@ -454,7 +454,7 @@ var Sidebar = function (_Component) {
                                 _react2.default.createElement(
                                     'a',
                                     { href: '#' },
-                                    'Sapien Mauris'
+                                    ' '
                                 )
                             ),
                             _react2.default.createElement(
@@ -463,7 +463,7 @@ var Sidebar = function (_Component) {
                                 _react2.default.createElement(
                                     'a',
                                     { href: '#' },
-                                    'Amet Lacinia'
+                                    ' '
                                 )
                             )
                         )

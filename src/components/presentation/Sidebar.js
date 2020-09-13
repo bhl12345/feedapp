@@ -50,12 +50,12 @@ class Sidebar extends Component {
                             <h2>News Feeds</h2>
                         </header>
                         <ul>
-                            <li><a href="index.html">Hacker News</a></li>
-                            <li><a href="generic.html">NY Daily News Sports</a></li>
-                            <li><a href="elements.html">Elements</a></li>
-                            <li><a href="#">Maximus Erat</a></li>
-                            <li><a href="#">Sapien Mauris</a></li>
-                            <li><a href="#">Amet Lacinia</a></li>
+                            <li><a href="http://rssfeeds.cincinnati.com/cincinnati-sports&x=1">Cincy Sports</a></li>
+                            <li><a href="https://www.govinfo.gov">Politics</a></li>
+                            <li><a href="elements.html"> </a></li>
+                            <li><a href="#"> </a></li>
+                            <li><a href="#"> </a></li>
+                            <li><a href="#"> </a></li>
                         </ul>
                     </nav>	
                 </div>
