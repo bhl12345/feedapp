@@ -406,7 +406,7 @@ var Sidebar = function (_Component) {
                             _react2.default.createElement(
                                 'h2',
                                 null,
-                                'My Feeds'
+                                'News Feeds'
                             )
                         ),
                         _react2.default.createElement(
@@ -558,19 +558,19 @@ var Home = function (_Component) {
                                     _react2.default.createElement(
                                         'h1',
                                         null,
-                                        'Welcome to NewsFeed'
+                                        'Welcome to Skillet News'
                                     ),
                                     _react2.default.createElement('hr', null),
                                     _react2.default.createElement(
                                         'p',
                                         null,
-                                        'A free and fully responsive site template'
+                                        ' where the news sizzles '
                                     )
                                 ),
                                 _react2.default.createElement(
                                     'p',
                                     null,
-                                    'Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.'
+                                    ' '
                                 ),
                                 _react2.default.createElement(
                                     'ul',

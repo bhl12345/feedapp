@@ -47,7 +47,7 @@ class Sidebar extends Component {
                     </section>
                     <nav id="menu">
                         <header className="major">
-                            <h2>My Feeds</h2>
+                            <h2>News Feeds</h2>
                         </header>
                         <ul>
                             <li><a href="index.html">Hacker News</a></li>
